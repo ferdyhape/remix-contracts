@@ -1,0 +1,99 @@
+{
+	"compiler": {
+		"version": "0.8.14+commit.80d49f37"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "decrementUint",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "increementUint8",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "myUint",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "myUint8",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_myUint",
+						"type": "uint256"
+					}
+				],
+				"name": "setMyUint",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/ExampleWrapAround.sol": "ExampleWrapAround"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/ExampleWrapAround.sol": {
+			"keccak256": "0xc47afd018e3df642cf0684b205f522cb27bd88763d0d33612ad985363b80467d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://59b0f8a1fd7407b27c5b7729ff739979816f991eb4106bae713998c82090610a",
+				"dweb:/ipfs/QmaDsFu9M699s2uKYy8zhUvicCL78wYVSfY83GkiAG4CA9"
+			]
+		}
+	},
+	"version": 1
+}

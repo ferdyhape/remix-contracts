@@ -1,0 +1,91 @@
+{
+	"compiler": {
+		"version": "0.8.14+commit.80d49f37"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_myString",
+						"type": "string"
+					}
+				],
+				"name": "compareTwoString",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "myString",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_myString",
+						"type": "string"
+					}
+				],
+				"name": "setMyString",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/ExampleString.sol": "ExampleString"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/ExampleString.sol": {
+			"keccak256": "0x4bd203cb5a456f6ea7739c292143596a2cc5d64fc6d04f8e08c2e17d4b03498f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a2d9e057fea017da049e9790e0f1dee5ffe09600e01ae51bcbdfeb064efd755e",
+				"dweb:/ipfs/Qmdd3X6SyQR1W5v8qNy4ZPp6zaieNZP8p37RrgK7jyuWtJ"
+			]
+		}
+	},
+	"version": 1
+}

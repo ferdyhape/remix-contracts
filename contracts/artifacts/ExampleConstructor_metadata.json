@@ -1,0 +1,90 @@
+{
+	"compiler": {
+		"version": "0.8.15+commit.e14f2714"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_someAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "myAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_myAddress",
+						"type": "address"
+					}
+				],
+				"name": "setMyAddress",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "setMyAddressToMsgSender",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/ExampleConstructor.sol": "ExampleConstructor"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/ExampleConstructor.sol": {
+			"keccak256": "0xc17df4c9c3de63f4480b9a097c144c9f0c4fd01c5139225b89750f6eadd94fb1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3896d73306b80134a76f64a07f6d840d5e0603f50934471328d599cf7281079e",
+				"dweb:/ipfs/QmWGYSN4RK4dzTrC8YgCPXAfKAYdvUqu3MAbTbixstwYer"
+			]
+		}
+	},
+	"version": 1
+}

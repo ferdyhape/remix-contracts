@@ -1,0 +1,250 @@
+{
+	"compiler": {
+		"version": "0.8.15+commit.e14f2714"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "productId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "description",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"name": "ProductAdded",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_description",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_price",
+						"type": "uint256"
+					}
+				],
+				"name": "addProduct",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "contractOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllProducts",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "productId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "description",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "price",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "owner",
+								"type": "address"
+							}
+						],
+						"internalType": "struct TestProductRegistry.Product[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_productId",
+						"type": "uint256"
+					}
+				],
+				"name": "getProduct",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "description",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "productOwner",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "productCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "products",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "productId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "description",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/TestProductRegistry.sol": "TestProductRegistry"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/TestProductRegistry.sol": {
+			"keccak256": "0x7115c9201c9df5c64b8accdfdc394df894251bcb83ada0d24ea7cc9b5b450a12",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f13ce2531d625942a221eb43445b66d8fe955bc861ad419ac73c6cd1a57ec4ae",
+				"dweb:/ipfs/QmQ3NP8uWHFd4qWZdpU72RumtHTUnjofnzrzfcoi5JtAP4"
+			]
+		}
+	},
+	"version": 1
+}

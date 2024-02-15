@@ -1,0 +1,66 @@
+{
+	"compiler": {
+		"version": "0.8.14+commit.80d49f37"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "someAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "updateSomeAddress",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/ExampleMsgSender.sol": "ExampleMsgSender"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/ExampleMsgSender.sol": {
+			"keccak256": "0x9f0c92184aa79cde60c533ea998965e65af27f1582e6aa02a6046407213233ba",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1cd0e3345146e1f25d58d4fa599c8cdcb9a386243c25511396de6c7156f34b7f",
+				"dweb:/ipfs/QmdWiJAJD93SvqzvXYftUpWctppc4drUfUtZqJhXFznopB"
+			]
+		}
+	},
+	"version": 1
+}

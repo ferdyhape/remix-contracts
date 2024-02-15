@@ -1,0 +1,197 @@
+{
+	"compiler": {
+		"version": "0.8.15+commit.e14f2714"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "transactionId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "rupiahAmount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "buyer",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "productName",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "quantity",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					}
+				],
+				"name": "TransactionAdded",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_rupiahAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_buyer",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_productName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_quantity",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_price",
+						"type": "uint256"
+					}
+				],
+				"name": "addTransaction",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "transactionCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "transactions",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "transactionId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "rupiahAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "buyer",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "productName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "quantity",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/PurchaseTransaction.sol": "PurchaseTransaction"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/PurchaseTransaction.sol": {
+			"keccak256": "0xccb2b4180b49b396e8b5e4e4e0d443b822178b02eeb9e7a1c5a067c050573e55",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://71cf42784d7a4a92affc582c01e7aa8450f49a089788144b934a24667325b26b",
+				"dweb:/ipfs/QmSF4VDKrXyRgFsJJCEPHLT47uRJvpoQZD4t82Akhf5vYG"
+			]
+		}
+	},
+	"version": 1
+}

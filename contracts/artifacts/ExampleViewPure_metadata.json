@@ -1,0 +1,115 @@
+{
+	"compiler": {
+		"version": "0.8.14+commit.80d49f37"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "a",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "b",
+						"type": "uint256"
+					}
+				],
+				"name": "getAddition",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getMyStorageVariable",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "myStorageVariable",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_newVar",
+						"type": "uint256"
+					}
+				],
+				"name": "setMyStorageVariable",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/ExampleViewPure.sol": "ExampleViewPure"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/ExampleViewPure.sol": {
+			"keccak256": "0x4aac6c47d2af1536030ca5a9b327ad15093db2ccdc7eb38c783744b7d3983d2d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://163404cba0f747068b33283f5baa7aa2626779356435735b4fdcfded59c79985",
+				"dweb:/ipfs/QmQgFTU8cUndahunaVnB35txL5NQooHc1Eq9PrG6k4Ezvg"
+			]
+		}
+	},
+	"version": 1
+}
