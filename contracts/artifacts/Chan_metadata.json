@@ -32,7 +32,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/ChangeName.sol": "Simple"
+			"contracts/ChangeName.sol": "Chan"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -47,11 +47,11 @@
 	},
 	"sources": {
 		"contracts/ChangeName.sol": {
-			"keccak256": "0xd3461cab1b4aa4100f64e5f82b605b396f7d43460a58a4cd2d58b9907ebc2da8",
+			"keccak256": "0x98f6e8b77311d7cc259647975ab8bcda9452350b17bb2ecedc3f5d95f270057c",
 			"license": "SEE LICENSE IN LICENSE",
 			"urls": [
-				"bzz-raw://8a4728733e013eeba81e5c5f7127a9f43bd34c00bd0e7ac5606986cfdd9b215b",
-				"dweb:/ipfs/QmXDcNPbxDZAiLt3bdETe87eQQgPsRaR1x4a1qCArJUF7Z"
+				"bzz-raw://e79e0d53aca3e9ab71417bff6e34703306fe39e9dac3592238ff6a1e8aece274",
+				"dweb:/ipfs/QmSt9LPkNzhG215thcg1zYWAsgQ3i6bPHj7LjvGEXJ4bVN"
 			]
 		}
 	},

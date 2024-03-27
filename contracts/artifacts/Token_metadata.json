@@ -1,0 +1,126 @@
+{
+	"compiler": {
+		"version": "0.8.16+commit.07a7930e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					}
+				],
+				"name": "getCompanyName",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					}
+				],
+				"name": "getTokenValue",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_companyName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_tokenValue",
+						"type": "uint256"
+					}
+				],
+				"name": "setStock",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "stocks",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "companyName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokenValue",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Token.sol": "Token"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Token.sol": {
+			"keccak256": "0x78dc20aac6ed33d240781c1f605476015289821a0fd21d87d15d0bd9f7189529",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://fe44c84c4bdf193ff4e986fbf9c821f02573d34f21aa4d65c711efed7952877f",
+				"dweb:/ipfs/QmNvo3nGm5b4M6GngqsJFxrc8xdkjEUgcvcCaPyNkzZYXd"
+			]
+		}
+	},
+	"version": 1
+}
