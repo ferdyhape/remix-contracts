@@ -48,37 +48,31 @@
 					{
 						"indexed": false,
 						"internalType": "string",
-						"name": "buyer",
+						"name": "from",
 						"type": "string"
 					},
 					{
 						"indexed": false,
 						"internalType": "string",
-						"name": "buyerId",
+						"name": "fromId",
 						"type": "string"
 					},
 					{
 						"indexed": false,
 						"internalType": "string",
-						"name": "sellerCompany",
+						"name": "to",
 						"type": "string"
 					},
 					{
 						"indexed": false,
 						"internalType": "string",
-						"name": "sellerId",
+						"name": "toId",
 						"type": "string"
 					},
 					{
 						"indexed": false,
-						"internalType": "uint256",
-						"name": "sumOfProduct",
-						"type": "uint256"
-					},
-					{
-						"indexed": false,
 						"internalType": "string",
-						"name": "totalPrice",
+						"name": "orderType",
 						"type": "string"
 					},
 					{
@@ -106,32 +100,27 @@
 					},
 					{
 						"internalType": "string",
-						"name": "_buyer",
+						"name": "_from",
 						"type": "string"
 					},
 					{
 						"internalType": "string",
-						"name": "_buyerId",
+						"name": "_fromId",
 						"type": "string"
 					},
 					{
 						"internalType": "string",
-						"name": "_sellerCompany",
+						"name": "_to",
 						"type": "string"
 					},
 					{
 						"internalType": "string",
-						"name": "_sellerId",
+						"name": "_toId",
 						"type": "string"
 					},
 					{
-						"internalType": "uint256",
-						"name": "_sumOfProduct",
-						"type": "uint256"
-					},
-					{
 						"internalType": "string",
-						"name": "_totalPrice",
+						"name": "_orderType",
 						"type": "string"
 					},
 					{
@@ -168,32 +157,27 @@
 							},
 							{
 								"internalType": "string",
-								"name": "buyer",
+								"name": "from",
 								"type": "string"
 							},
 							{
 								"internalType": "string",
-								"name": "buyerId",
+								"name": "fromId",
 								"type": "string"
 							},
 							{
 								"internalType": "string",
-								"name": "sellerCompany",
+								"name": "to",
 								"type": "string"
 							},
 							{
 								"internalType": "string",
-								"name": "sellerId",
+								"name": "toId",
 								"type": "string"
 							},
 							{
-								"internalType": "uint256",
-								"name": "sumOfProduct",
-								"type": "uint256"
-							},
-							{
 								"internalType": "string",
-								"name": "totalPrice",
+								"name": "orderType",
 								"type": "string"
 							},
 							{
@@ -239,32 +223,27 @@
 							},
 							{
 								"internalType": "string",
-								"name": "buyer",
+								"name": "from",
 								"type": "string"
 							},
 							{
 								"internalType": "string",
-								"name": "buyerId",
+								"name": "fromId",
 								"type": "string"
 							},
 							{
 								"internalType": "string",
-								"name": "sellerCompany",
+								"name": "to",
 								"type": "string"
 							},
 							{
 								"internalType": "string",
-								"name": "sellerId",
+								"name": "toId",
 								"type": "string"
 							},
 							{
-								"internalType": "uint256",
-								"name": "sumOfProduct",
-								"type": "uint256"
-							},
-							{
 								"internalType": "string",
-								"name": "totalPrice",
+								"name": "orderType",
 								"type": "string"
 							},
 							{
@@ -310,32 +289,27 @@
 							},
 							{
 								"internalType": "string",
-								"name": "buyer",
+								"name": "from",
 								"type": "string"
 							},
 							{
 								"internalType": "string",
-								"name": "buyerId",
+								"name": "fromId",
 								"type": "string"
 							},
 							{
 								"internalType": "string",
-								"name": "sellerCompany",
+								"name": "to",
 								"type": "string"
 							},
 							{
 								"internalType": "string",
-								"name": "sellerId",
+								"name": "toId",
 								"type": "string"
 							},
 							{
-								"internalType": "uint256",
-								"name": "sumOfProduct",
-								"type": "uint256"
-							},
-							{
 								"internalType": "string",
-								"name": "totalPrice",
+								"name": "orderType",
 								"type": "string"
 							},
 							{
@@ -381,32 +355,27 @@
 							},
 							{
 								"internalType": "string",
-								"name": "buyer",
+								"name": "from",
 								"type": "string"
 							},
 							{
 								"internalType": "string",
-								"name": "buyerId",
+								"name": "fromId",
 								"type": "string"
 							},
 							{
 								"internalType": "string",
-								"name": "sellerCompany",
+								"name": "to",
 								"type": "string"
 							},
 							{
 								"internalType": "string",
-								"name": "sellerId",
+								"name": "toId",
 								"type": "string"
 							},
 							{
-								"internalType": "uint256",
-								"name": "sumOfProduct",
-								"type": "uint256"
-							},
-							{
 								"internalType": "string",
-								"name": "totalPrice",
+								"name": "orderType",
 								"type": "string"
 							},
 							{
@@ -463,32 +432,27 @@
 					},
 					{
 						"internalType": "string",
-						"name": "buyer",
+						"name": "from",
 						"type": "string"
 					},
 					{
 						"internalType": "string",
-						"name": "buyerId",
+						"name": "fromId",
 						"type": "string"
 					},
 					{
 						"internalType": "string",
-						"name": "sellerCompany",
+						"name": "to",
 						"type": "string"
 					},
 					{
 						"internalType": "string",
-						"name": "sellerId",
+						"name": "toId",
 						"type": "string"
 					},
 					{
-						"internalType": "uint256",
-						"name": "sumOfProduct",
-						"type": "uint256"
-					},
-					{
 						"internalType": "string",
-						"name": "totalPrice",
+						"name": "orderType",
 						"type": "string"
 					},
 					{
@@ -519,7 +483,7 @@
 					},
 					{
 						"internalType": "uint256",
-						"name": "_createdAt",
+						"name": "_updatedAt",
 						"type": "uint256"
 					}
 				],
@@ -542,7 +506,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/TransactionContractWithEvents.sol": "TransactionContract"
+			"contracts/TransactionContract28April.sol": "TransactionContract"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -556,12 +520,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/TransactionContractWithEvents.sol": {
-			"keccak256": "0x21bd2a0fe2855daa07917f174a559b3a4307072b6473e2cad5d7d55c885e1866",
+		"contracts/TransactionContract28April.sol": {
+			"keccak256": "0x9c48882c5a17a440980ebd3c18d62a609459c585a02c9a729cd5c5879fc16089",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://2aac11ab1dbac660b1a63ac8826eada7b31e4af79fe60845fd205a3ca4563d4d",
-				"dweb:/ipfs/QmcuJL8ALq6eLMywCrUfMvFSL3GPHd5saTUQE78Mc9CC3u"
+				"bzz-raw://7f7b684549b020f9c67b5bf57ad0ba5e4b1287aedfa450d5ee9b9a787ff9318a",
+				"dweb:/ipfs/QmRAs7QPvtKFqS8qkk3Q4vvaVbMGYukrKts9B6hp6Y4KqS"
 			]
 		}
 	},
