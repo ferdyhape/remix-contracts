@@ -6,39 +6,13 @@
 	"output": {
 		"abi": [
 			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "uint256",
-						"name": "transactionId",
-						"type": "uint256"
-					},
-					{
-						"indexed": false,
-						"internalType": "string",
-						"name": "paymentStatus",
-						"type": "string"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "updatedAt",
-						"type": "uint256"
-					}
-				],
-				"name": "PaymentStatusUpdated",
-				"type": "event"
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
 			},
 			{
 				"anonymous": false,
 				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "uint256",
-						"name": "transactionId",
-						"type": "uint256"
-					},
 					{
 						"indexed": false,
 						"internalType": "string",
@@ -48,26 +22,52 @@
 					{
 						"indexed": false,
 						"internalType": "string",
-						"name": "from",
+						"name": "newPaymentStatus",
+						"type": "string"
+					}
+				],
+				"name": "PaymentStatusUpdated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "transactionCode",
 						"type": "string"
 					},
 					{
 						"indexed": false,
 						"internalType": "string",
-						"name": "fromId",
+						"name": "newStatus",
+						"type": "string"
+					}
+				],
+				"name": "StatusUpdated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "transactionCode",
 						"type": "string"
 					},
 					{
 						"indexed": false,
-						"internalType": "string",
-						"name": "to",
-						"type": "string"
+						"internalType": "uint256",
+						"name": "campaignId",
+						"type": "uint256"
 					},
 					{
 						"indexed": false,
-						"internalType": "string",
-						"name": "toId",
-						"type": "string"
+						"internalType": "uint256",
+						"name": "fromToUserId",
+						"type": "uint256"
 					},
 					{
 						"indexed": false,
@@ -80,6 +80,24 @@
 						"internalType": "string",
 						"name": "paymentStatus",
 						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "status",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "quantity",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "totalPrice",
+						"type": "uint256"
 					},
 					{
 						"indexed": false,
@@ -99,24 +117,14 @@
 						"type": "string"
 					},
 					{
-						"internalType": "string",
-						"name": "_from",
-						"type": "string"
+						"internalType": "uint256",
+						"name": "_campaignId",
+						"type": "uint256"
 					},
 					{
-						"internalType": "string",
-						"name": "_fromId",
-						"type": "string"
-					},
-					{
-						"internalType": "string",
-						"name": "_to",
-						"type": "string"
-					},
-					{
-						"internalType": "string",
-						"name": "_toId",
-						"type": "string"
+						"internalType": "uint256",
+						"name": "_fromToUserId",
+						"type": "uint256"
 					},
 					{
 						"internalType": "string",
@@ -127,6 +135,21 @@
 						"internalType": "string",
 						"name": "_paymentStatus",
 						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_status",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_quantity",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_totalPrice",
+						"type": "uint256"
 					},
 					{
 						"internalType": "uint256",
@@ -141,39 +164,24 @@
 			},
 			{
 				"inputs": [],
-				"name": "getAllTransaction",
+				"name": "getAllTransactions",
 				"outputs": [
 					{
 						"components": [
-							{
-								"internalType": "uint256",
-								"name": "transactionId",
-								"type": "uint256"
-							},
 							{
 								"internalType": "string",
 								"name": "transactionCode",
 								"type": "string"
 							},
 							{
-								"internalType": "string",
-								"name": "from",
-								"type": "string"
+								"internalType": "uint256",
+								"name": "campaignId",
+								"type": "uint256"
 							},
 							{
-								"internalType": "string",
-								"name": "fromId",
-								"type": "string"
-							},
-							{
-								"internalType": "string",
-								"name": "to",
-								"type": "string"
-							},
-							{
-								"internalType": "string",
-								"name": "toId",
-								"type": "string"
+								"internalType": "uint256",
+								"name": "fromToUserId",
+								"type": "uint256"
 							},
 							{
 								"internalType": "string",
@@ -184,6 +192,21 @@
 								"internalType": "string",
 								"name": "paymentStatus",
 								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "status",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "quantity",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "totalPrice",
+								"type": "uint256"
 							},
 							{
 								"internalType": "uint256",
@@ -202,44 +225,29 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "_transactionId",
-						"type": "uint256"
+						"internalType": "string",
+						"name": "_transactionCode",
+						"type": "string"
 					}
 				],
-				"name": "getTransaction",
+				"name": "getTransactionByCode",
 				"outputs": [
 					{
 						"components": [
-							{
-								"internalType": "uint256",
-								"name": "transactionId",
-								"type": "uint256"
-							},
 							{
 								"internalType": "string",
 								"name": "transactionCode",
 								"type": "string"
 							},
 							{
-								"internalType": "string",
-								"name": "from",
-								"type": "string"
+								"internalType": "uint256",
+								"name": "campaignId",
+								"type": "uint256"
 							},
 							{
-								"internalType": "string",
-								"name": "fromId",
-								"type": "string"
-							},
-							{
-								"internalType": "string",
-								"name": "to",
-								"type": "string"
-							},
-							{
-								"internalType": "string",
-								"name": "toId",
-								"type": "string"
+								"internalType": "uint256",
+								"name": "fromToUserId",
+								"type": "uint256"
 							},
 							{
 								"internalType": "string",
@@ -250,6 +258,21 @@
 								"internalType": "string",
 								"name": "paymentStatus",
 								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "status",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "quantity",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "totalPrice",
+								"type": "uint256"
 							},
 							{
 								"internalType": "uint256",
@@ -268,44 +291,29 @@
 			{
 				"inputs": [
 					{
-						"internalType": "string",
-						"name": "_buyerId",
-						"type": "string"
+						"internalType": "uint256",
+						"name": "_fromToUserId",
+						"type": "uint256"
 					}
 				],
-				"name": "getTransactionByBuyerId",
+				"name": "getTransactionByFromToUserId",
 				"outputs": [
 					{
 						"components": [
-							{
-								"internalType": "uint256",
-								"name": "transactionId",
-								"type": "uint256"
-							},
 							{
 								"internalType": "string",
 								"name": "transactionCode",
 								"type": "string"
 							},
 							{
-								"internalType": "string",
-								"name": "from",
-								"type": "string"
+								"internalType": "uint256",
+								"name": "campaignId",
+								"type": "uint256"
 							},
 							{
-								"internalType": "string",
-								"name": "fromId",
-								"type": "string"
-							},
-							{
-								"internalType": "string",
-								"name": "to",
-								"type": "string"
-							},
-							{
-								"internalType": "string",
-								"name": "toId",
-								"type": "string"
+								"internalType": "uint256",
+								"name": "fromToUserId",
+								"type": "uint256"
 							},
 							{
 								"internalType": "string",
@@ -316,6 +324,21 @@
 								"internalType": "string",
 								"name": "paymentStatus",
 								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "status",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "quantity",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "totalPrice",
+								"type": "uint256"
 							},
 							{
 								"internalType": "uint256",
@@ -334,77 +357,17 @@
 			{
 				"inputs": [
 					{
-						"internalType": "string",
-						"name": "_sellerId",
-						"type": "string"
-					}
-				],
-				"name": "getTransactionBySellerId",
-				"outputs": [
-					{
-						"components": [
-							{
-								"internalType": "uint256",
-								"name": "transactionId",
-								"type": "uint256"
-							},
-							{
-								"internalType": "string",
-								"name": "transactionCode",
-								"type": "string"
-							},
-							{
-								"internalType": "string",
-								"name": "from",
-								"type": "string"
-							},
-							{
-								"internalType": "string",
-								"name": "fromId",
-								"type": "string"
-							},
-							{
-								"internalType": "string",
-								"name": "to",
-								"type": "string"
-							},
-							{
-								"internalType": "string",
-								"name": "toId",
-								"type": "string"
-							},
-							{
-								"internalType": "string",
-								"name": "orderType",
-								"type": "string"
-							},
-							{
-								"internalType": "string",
-								"name": "paymentStatus",
-								"type": "string"
-							},
-							{
-								"internalType": "uint256",
-								"name": "createdAt",
-								"type": "uint256"
-							}
-						],
-						"internalType": "struct TransactionContract.Transaction[]",
-						"name": "",
-						"type": "tuple[]"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "transactionCount",
-				"outputs": [
-					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
+					}
+				],
+				"name": "transactionCodes",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
 					}
 				],
 				"stateMutability": "view",
@@ -413,42 +376,27 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "string",
 						"name": "",
-						"type": "uint256"
+						"type": "string"
 					}
 				],
 				"name": "transactions",
 				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "transactionId",
-						"type": "uint256"
-					},
 					{
 						"internalType": "string",
 						"name": "transactionCode",
 						"type": "string"
 					},
 					{
-						"internalType": "string",
-						"name": "from",
-						"type": "string"
+						"internalType": "uint256",
+						"name": "campaignId",
+						"type": "uint256"
 					},
 					{
-						"internalType": "string",
-						"name": "fromId",
-						"type": "string"
-					},
-					{
-						"internalType": "string",
-						"name": "to",
-						"type": "string"
-					},
-					{
-						"internalType": "string",
-						"name": "toId",
-						"type": "string"
+						"internalType": "uint256",
+						"name": "fromToUserId",
+						"type": "uint256"
 					},
 					{
 						"internalType": "string",
@@ -459,6 +407,21 @@
 						"internalType": "string",
 						"name": "paymentStatus",
 						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "status",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "quantity",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "totalPrice",
+						"type": "uint256"
 					},
 					{
 						"internalType": "uint256",
@@ -472,22 +435,35 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "_transactionId",
-						"type": "uint256"
-					},
-					{
 						"internalType": "string",
-						"name": "_paymentStatus",
+						"name": "_transactionCode",
 						"type": "string"
 					},
 					{
-						"internalType": "uint256",
-						"name": "_updatedAt",
-						"type": "uint256"
+						"internalType": "string",
+						"name": "_newPaymentStatus",
+						"type": "string"
 					}
 				],
 				"name": "updatePaymentStatus",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_transactionCode",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_newStatus",
+						"type": "string"
+					}
+				],
+				"name": "updateStatus",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -506,7 +482,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/TransactionContract28April.sol": "TransactionContract"
+			"contracts/TransactionContract8Juni.sol": "TransactionContract"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -520,12 +496,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/TransactionContract28April.sol": {
-			"keccak256": "0x9c48882c5a17a440980ebd3c18d62a609459c585a02c9a729cd5c5879fc16089",
+		"contracts/TransactionContract8Juni.sol": {
+			"keccak256": "0x595b14a4e27a160a7e71344a5a4f90dd299ad30b22009ba2d6f56fcd9fbde86f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7f7b684549b020f9c67b5bf57ad0ba5e4b1287aedfa450d5ee9b9a787ff9318a",
-				"dweb:/ipfs/QmRAs7QPvtKFqS8qkk3Q4vvaVbMGYukrKts9B6hp6Y4KqS"
+				"bzz-raw://1e2bda65691756123585c3f4a8c6dc2e8c761f470ab88f5ef4cff6006d1a376e",
+				"dweb:/ipfs/QmRvc88CT4LvUS15bc5tBfsfst6Wj7sm5Vsn31UR5WVL1s"
 			]
 		}
 	},
