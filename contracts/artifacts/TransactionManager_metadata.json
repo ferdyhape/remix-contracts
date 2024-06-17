@@ -135,9 +135,43 @@
 								"type": "uint256"
 							}
 						],
-						"internalType": "struct TransactionDetailContract.TransactionDetail[]",
+						"internalType": "struct TransactionManager.TransactionDetail[]",
 						"name": "",
 						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "transactionDetails",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "transactionCode",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "token",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "createdAt",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -157,7 +191,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/TransactionDetailContract18Juni.sol": "TransactionDetailContract"
+			"contracts/TransactionDetailContract18Juni.sol": "TransactionManager"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -172,11 +206,11 @@
 	},
 	"sources": {
 		"contracts/TransactionDetailContract18Juni.sol": {
-			"keccak256": "0x092d3ed8ebe7dc457be7c2beb6c7575974303c86f1bd4e21771ab2116ec16a6e",
+			"keccak256": "0x9c9b4cfdbd456a0ece1d4bf30fb2908899338953f1fd6862d0cf7ca2ee6748a3",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://06654a170304ad197baece2a623874fc989b5f1b98e02fe9962a2beaf5710b15",
-				"dweb:/ipfs/Qmc81r5fhmV6of8Y6SH7fyY4XWZvPETKJ92jitaKms6won"
+				"bzz-raw://2b6db55df88720036b0f08249e66d150a096e539ded60d8102ebd64e96f09442",
+				"dweb:/ipfs/Qmd9sH81VtEyZTi9TTzTLWR66vHLVtK7p255YqW5bEaXUA"
 			]
 		}
 	},

@@ -1,16 +1,18 @@
-//SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: MIT
 pragma solidity 0.8.16;
 
 contract TransactionContract {
     struct Transaction {
         string transactionCode;
-        uint campaignId;
-        uint fromToUserId;
+        string campaignId;
+        string fromToUserId;
         string orderType;
         string paymentStatus;
         string status;
         uint quantity;
         uint256 totalPrice;
+        string paymentMethodDetailId;
+        string paymentProof; // Added paymentProof attribute
         uint createdAt;
     }
 
@@ -19,19 +21,21 @@ contract TransactionContract {
 
     event TransactionAdded(
         string transactionCode,
-        uint campaignId,
-        uint fromToUserId,
+        string campaignId,
+        string fromToUserId,
         string orderType,
         string paymentStatus,
         string status,
         uint quantity,
         uint256 totalPrice,
+        string paymentMethodDetailId,
+        string paymentProof, // Added paymentProof attribute to event
         uint createdAt
     );
 
     event StatusUpdated(string transactionCode, string newStatus);
-
     event PaymentStatusUpdated(string transactionCode, string newPaymentStatus);
+    event PaymentProofUpdated(string transactionCode, string newPaymentProof);
 
     constructor() {
         // Buat konstruktor
@@ -39,13 +43,14 @@ contract TransactionContract {
 
     function addTransaction(
         string memory _transactionCode,
-        uint _campaignId,
-        uint _fromToUserId,
+        string memory _campaignId,
+        string memory _fromToUserId,
         string memory _orderType,
         string memory _paymentStatus,
         string memory _status,
         uint _quantity,
         uint256 _totalPrice,
+        string memory _paymentMethodDetailId,
         uint _createdAt
     ) public {
         transactions[_transactionCode] = Transaction(
@@ -57,6 +62,8 @@ contract TransactionContract {
             _status,
             _quantity,
             _totalPrice,
+            _paymentMethodDetailId,
+            "null",
             _createdAt
         );
 
@@ -71,6 +78,8 @@ contract TransactionContract {
             _status,
             _quantity,
             _totalPrice,
+            _paymentMethodDetailId,
+            "null",
             _createdAt
         );
     }
@@ -109,13 +118,27 @@ contract TransactionContract {
         emit PaymentStatusUpdated(_transactionCode, _newPaymentStatus);
     }
 
+    function updatePaymentProof(
+        string memory _transactionCode,
+        string memory _newPaymentProof
+    ) public {
+        require(
+            bytes(transactions[_transactionCode].transactionCode).length != 0,
+            "Transaction does not exist"
+        );
+        transactions[_transactionCode].paymentProof = _newPaymentProof;
+        transactions[_transactionCode].paymentStatus = "paid"; // Update payment status to "paid"
+        emit PaymentProofUpdated(_transactionCode, _newPaymentProof);
+        emit PaymentStatusUpdated(_transactionCode, "paid");
+    }
+
     function getTransactionByFromToUserId(
-        uint _fromToUserId
+        string memory _fromToUserId
     ) public view returns (Transaction[] memory) {
         uint count = 0;
         for (uint i = 0; i < transactionCodes.length; i++) {
             if (
-                transactions[transactionCodes[i]].fromToUserId == _fromToUserId
+                keccak256(abi.encodePacked(transactions[transactionCodes[i]].fromToUserId)) == keccak256(abi.encodePacked(_fromToUserId))
             ) {
                 count++;
             }
@@ -124,7 +147,7 @@ contract TransactionContract {
         uint index = 0;
         for (uint i = 0; i < transactionCodes.length; i++) {
             if (
-                transactions[transactionCodes[i]].fromToUserId == _fromToUserId
+                keccak256(abi.encodePacked(transactions[transactionCodes[i]].fromToUserId)) == keccak256(abi.encodePacked(_fromToUserId))
             ) {
                 result[index] = transactions[transactionCodes[i]];
                 index++;
@@ -144,22 +167,31 @@ contract TransactionContract {
     }
 
     function getTransactionByCampaignId(
-        uint _campaignId
+        string memory _campaignId
     ) public view returns (Transaction[] memory) {
         uint count = 0;
         for (uint i = 0; i < transactionCodes.length; i++) {
-            if (transactions[transactionCodes[i]].campaignId == _campaignId) {
+            if (
+                keccak256(abi.encodePacked(transactions[transactionCodes[i]].campaignId)) == keccak256(abi.encodePacked(_campaignId))
+            ) {
                 count++;
             }
         }
         Transaction[] memory result = new Transaction[](count);
         uint index = 0;
         for (uint i = 0; i < transactionCodes.length; i++) {
-            if (transactions[transactionCodes[i]].campaignId == _campaignId) {
+            if (
+                keccak256(abi.encodePacked(transactions[transactionCodes[i]].campaignId)) == keccak256(abi.encodePacked(_campaignId))
+            ) {
                 result[index] = transactions[transactionCodes[i]];
                 index++;
             }
         }
         return result;
+    }
+
+    // Function to get the count of transactions
+    function getCountTransaction() public view returns (uint) {
+        return transactionCodes.length;
     }
 }

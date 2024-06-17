@@ -1,16 +1,17 @@
-//SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: MIT
 pragma solidity 0.8.16;
 
 contract TransactionContract {
     struct Transaction {
         string transactionCode;
-        uint campaignId;
-        uint fromToUserId;
+        string campaignId;
+        string fromToUserId;
         string orderType;
         string paymentStatus;
         string status;
         uint quantity;
         uint256 totalPrice;
+        string paymentMethodDetailId;
         uint createdAt;
     }
 
@@ -19,13 +20,14 @@ contract TransactionContract {
 
     event TransactionAdded(
         string transactionCode,
-        uint campaignId,
-        uint fromToUserId,
+        string campaignId,
+        string fromToUserId,
         string orderType,
         string paymentStatus,
         string status,
         uint quantity,
         uint256 totalPrice,
+        string paymentMethodDetailId,
         uint createdAt
     );
 
@@ -39,13 +41,14 @@ contract TransactionContract {
 
     function addTransaction(
         string memory _transactionCode,
-        uint _campaignId,
-        uint _fromToUserId,
+        string memory _campaignId,
+        string memory _fromToUserId,
         string memory _orderType,
         string memory _paymentStatus,
         string memory _status,
         uint _quantity,
         uint256 _totalPrice,
+        string memory _paymentMethodDetailId,
         uint _createdAt
     ) public {
         transactions[_transactionCode] = Transaction(
@@ -57,6 +60,7 @@ contract TransactionContract {
             _status,
             _quantity,
             _totalPrice,
+            _paymentMethodDetailId,
             _createdAt
         );
 
@@ -71,6 +75,7 @@ contract TransactionContract {
             _status,
             _quantity,
             _totalPrice,
+            _paymentMethodDetailId,
             _createdAt
         );
     }
@@ -110,12 +115,12 @@ contract TransactionContract {
     }
 
     function getTransactionByFromToUserId(
-        uint _fromToUserId
+        string memory _fromToUserId
     ) public view returns (Transaction[] memory) {
         uint count = 0;
         for (uint i = 0; i < transactionCodes.length; i++) {
             if (
-                transactions[transactionCodes[i]].fromToUserId == _fromToUserId
+                keccak256(abi.encodePacked(transactions[transactionCodes[i]].fromToUserId)) == keccak256(abi.encodePacked(_fromToUserId))
             ) {
                 count++;
             }
@@ -124,7 +129,7 @@ contract TransactionContract {
         uint index = 0;
         for (uint i = 0; i < transactionCodes.length; i++) {
             if (
-                transactions[transactionCodes[i]].fromToUserId == _fromToUserId
+                keccak256(abi.encodePacked(transactions[transactionCodes[i]].fromToUserId)) == keccak256(abi.encodePacked(_fromToUserId))
             ) {
                 result[index] = transactions[transactionCodes[i]];
                 index++;
@@ -144,18 +149,22 @@ contract TransactionContract {
     }
 
     function getTransactionByCampaignId(
-        uint _campaignId
+        string memory _campaignId
     ) public view returns (Transaction[] memory) {
         uint count = 0;
         for (uint i = 0; i < transactionCodes.length; i++) {
-            if (transactions[transactionCodes[i]].campaignId == _campaignId) {
+            if (
+                keccak256(abi.encodePacked(transactions[transactionCodes[i]].campaignId)) == keccak256(abi.encodePacked(_campaignId))
+            ) {
                 count++;
             }
         }
         Transaction[] memory result = new Transaction[](count);
         uint index = 0;
         for (uint i = 0; i < transactionCodes.length; i++) {
-            if (transactions[transactionCodes[i]].campaignId == _campaignId) {
+            if (
+                keccak256(abi.encodePacked(transactions[transactionCodes[i]].campaignId)) == keccak256(abi.encodePacked(_campaignId))
+            ) {
                 result[index] = transactions[transactionCodes[i]];
                 index++;
             }

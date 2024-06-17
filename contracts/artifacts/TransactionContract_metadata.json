@@ -22,6 +22,25 @@
 					{
 						"indexed": false,
 						"internalType": "string",
+						"name": "newPaymentProof",
+						"type": "string"
+					}
+				],
+				"name": "PaymentProofUpdated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "transactionCode",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
 						"name": "newPaymentStatus",
 						"type": "string"
 					}
@@ -59,15 +78,15 @@
 					},
 					{
 						"indexed": false,
-						"internalType": "uint256",
+						"internalType": "string",
 						"name": "campaignId",
-						"type": "uint256"
+						"type": "string"
 					},
 					{
 						"indexed": false,
-						"internalType": "uint256",
+						"internalType": "string",
 						"name": "fromToUserId",
-						"type": "uint256"
+						"type": "string"
 					},
 					{
 						"indexed": false,
@@ -101,6 +120,18 @@
 					},
 					{
 						"indexed": false,
+						"internalType": "string",
+						"name": "paymentMethodDetailId",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "paymentProof",
+						"type": "string"
+					},
+					{
+						"indexed": false,
 						"internalType": "uint256",
 						"name": "createdAt",
 						"type": "uint256"
@@ -117,14 +148,14 @@
 						"type": "string"
 					},
 					{
-						"internalType": "uint256",
+						"internalType": "string",
 						"name": "_campaignId",
-						"type": "uint256"
+						"type": "string"
 					},
 					{
-						"internalType": "uint256",
+						"internalType": "string",
 						"name": "_fromToUserId",
-						"type": "uint256"
+						"type": "string"
 					},
 					{
 						"internalType": "string",
@@ -152,6 +183,11 @@
 						"type": "uint256"
 					},
 					{
+						"internalType": "string",
+						"name": "_paymentMethodDetailId",
+						"type": "string"
+					},
+					{
 						"internalType": "uint256",
 						"name": "_createdAt",
 						"type": "uint256"
@@ -174,14 +210,14 @@
 								"type": "string"
 							},
 							{
-								"internalType": "uint256",
+								"internalType": "string",
 								"name": "campaignId",
-								"type": "uint256"
+								"type": "string"
 							},
 							{
-								"internalType": "uint256",
+								"internalType": "string",
 								"name": "fromToUserId",
-								"type": "uint256"
+								"type": "string"
 							},
 							{
 								"internalType": "string",
@@ -207,6 +243,105 @@
 								"internalType": "uint256",
 								"name": "totalPrice",
 								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "paymentMethodDetailId",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "paymentProof",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "createdAt",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct TransactionContract.Transaction[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getCountTransaction",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_campaignId",
+						"type": "string"
+					}
+				],
+				"name": "getTransactionByCampaignId",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "transactionCode",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "campaignId",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "fromToUserId",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "orderType",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "paymentStatus",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "status",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "quantity",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "totalPrice",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "paymentMethodDetailId",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "paymentProof",
+								"type": "string"
 							},
 							{
 								"internalType": "uint256",
@@ -240,14 +375,14 @@
 								"type": "string"
 							},
 							{
-								"internalType": "uint256",
+								"internalType": "string",
 								"name": "campaignId",
-								"type": "uint256"
+								"type": "string"
 							},
 							{
-								"internalType": "uint256",
+								"internalType": "string",
 								"name": "fromToUserId",
-								"type": "uint256"
+								"type": "string"
 							},
 							{
 								"internalType": "string",
@@ -273,6 +408,16 @@
 								"internalType": "uint256",
 								"name": "totalPrice",
 								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "paymentMethodDetailId",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "paymentProof",
+								"type": "string"
 							},
 							{
 								"internalType": "uint256",
@@ -291,9 +436,9 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "string",
 						"name": "_fromToUserId",
-						"type": "uint256"
+						"type": "string"
 					}
 				],
 				"name": "getTransactionByFromToUserId",
@@ -306,14 +451,14 @@
 								"type": "string"
 							},
 							{
-								"internalType": "uint256",
+								"internalType": "string",
 								"name": "campaignId",
-								"type": "uint256"
+								"type": "string"
 							},
 							{
-								"internalType": "uint256",
+								"internalType": "string",
 								"name": "fromToUserId",
-								"type": "uint256"
+								"type": "string"
 							},
 							{
 								"internalType": "string",
@@ -339,6 +484,16 @@
 								"internalType": "uint256",
 								"name": "totalPrice",
 								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "paymentMethodDetailId",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "paymentProof",
+								"type": "string"
 							},
 							{
 								"internalType": "uint256",
@@ -389,14 +544,14 @@
 						"type": "string"
 					},
 					{
-						"internalType": "uint256",
+						"internalType": "string",
 						"name": "campaignId",
-						"type": "uint256"
+						"type": "string"
 					},
 					{
-						"internalType": "uint256",
+						"internalType": "string",
 						"name": "fromToUserId",
-						"type": "uint256"
+						"type": "string"
 					},
 					{
 						"internalType": "string",
@@ -424,12 +579,40 @@
 						"type": "uint256"
 					},
 					{
+						"internalType": "string",
+						"name": "paymentMethodDetailId",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "paymentProof",
+						"type": "string"
+					},
+					{
 						"internalType": "uint256",
 						"name": "createdAt",
 						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_transactionCode",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_newPaymentProof",
+						"type": "string"
+					}
+				],
+				"name": "updatePaymentProof",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -482,7 +665,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/TransactionContract8Juni.sol": "TransactionContract"
+			"contracts/TransactionContract17Juni.sol": "TransactionContract"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -496,12 +679,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/TransactionContract8Juni.sol": {
-			"keccak256": "0x595b14a4e27a160a7e71344a5a4f90dd299ad30b22009ba2d6f56fcd9fbde86f",
+		"contracts/TransactionContract17Juni.sol": {
+			"keccak256": "0xa0d9219e059425edd50ec73fc4e76cd100f04d68151eb9c9db6dcd4769e186e0",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://1e2bda65691756123585c3f4a8c6dc2e8c761f470ab88f5ef4cff6006d1a376e",
-				"dweb:/ipfs/QmRvc88CT4LvUS15bc5tBfsfst6Wj7sm5Vsn31UR5WVL1s"
+				"bzz-raw://ede56451b6e2bb62ff645de6ffa979bc9d139d933971be719d863f210df52a0a",
+				"dweb:/ipfs/QmbPaNnM3FP5ZkEvpCM7aRg8hu3VmvcxP213chUiT3P582"
 			]
 		}
 	},
